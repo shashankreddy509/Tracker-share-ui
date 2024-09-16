@@ -1,0 +1,30 @@
+
+
+CREATE TABLE transactions(
+    transactionId TEXT NOT NULL,
+    storeName TEXT,
+    transactionDate TEXT,
+    createAt TEXT,
+    transactionType INTEGER,
+    amount INTEGER,
+    cardNo TEXT,
+    uid TEXT,
+    description TEXT,
+    accountType INTEGER,
+    accountId TEXT,
+    imageUrl TEXT,
+    categoryId TEXT,
+    categoryName TEXT
+);
+
+
+
+insertTransactions:
+INSERT INTO transactions(transactionId, storeName, transactionDate, createAt, transactionType, amount, cardNo, uid, description, accountType,accountId, imageUrl,categoryId, categoryName)
+VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+
+removeAllTransactions:
+DELETE FROM transactions;
+
+selectAllTransactions:
+SELECT * FROM transactions;
